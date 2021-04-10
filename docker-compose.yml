@@ -25,5 +25,6 @@ services:
         volumes:
             - ./:/var/www/html:cached
         labels:
-            - "traefik.enable=false"
+            - "traefik.enable=true"
             - "traefik.http.routers.${PROJECT_NAME}_nginx.rule=Host(`${PROJECT_BASE_URL}`)"
+
