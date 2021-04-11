@@ -5,6 +5,7 @@ services:
     php:
         image: wodby/php:$PHP_TAG
         container_name: "${PROJECT_NAME}_php"
+        restart: always
         environment:
             PHP_FPM_USER: wodby
             PHP_FPM_GROUP: wodby
@@ -14,11 +15,10 @@ services:
     nginx:
         image: wodby/nginx:$NGINX_TAG
         container_name: "${PROJECT_NAME}_nginx"
+        restart: always
         depends_on:
             - php
         environment:
-            NGINX_STATIC_OPEN_FILE_CACHE: "off"
-            NGINX_ERROR_LOG_LEVEL: debug
             NGINX_BACKEND_HOST: php
             NGINX_VHOST_PRESET: php
             NGINX_SERVER_ROOT: /var/www/html/public
