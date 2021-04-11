@@ -26,9 +26,17 @@ services:
             - ./:/var/www/html:cached
         labels:
             - "traefik.enable=true"
-            - "traefik.http.routers.${PROJECT_NAME}_nginx.rule=Host(`${PROJECT_BASE_URL}`,`www.${PROJECT_BASE_URL}`)"
-            - "traefik.http.routers.${PROJECT_NAME}_nginx.middlewares=${PROJECT_NAME}_nginx_redirect"
-            - "traefik.http.middlewares.${PROJECT_NAME}_nginx_redirect.redirectregex.regex=^http://${PROJECT_BASE_URL}/(.*)$$"
-            - "traefik.http.middlewares.${PROJECT_NAME}_nginx_redirect.redirectregex.replacement=http://www.${PROJECT_BASE_URL}/$${1}"
-            - "traefik.http.middlewares.${PROJECT_NAME}_nginx_redirect.redirectregex.permanent=true"
+            - "traefik.http.routers.${PROJECT_NAME}_http.rule=Host(`${PROJECT_BASE_URL}`,`www.${PROJECT_BASE_URL}`)"
+            - "traefik.http.routers.${PROJECT_NAME}_http.entrypoints=web"
+            - "traefik.http.routers.${PROJECT_NAME}_http.middlewares=${PROJECT_NAME}_https_redirect"
+            - "traefik.http.routers.${PROJECT_NAME}_https.rule=Host(`${PROJECT_BASE_URL}`,`www.${PROJECT_BASE_URL}`)"
+            - "traefik.http.routers.${PROJECT_NAME}_https.entrypoints=websecure"
+            - "traefik.http.routers.${PROJECT_NAME}_https.tls=true"
+            - "traefik.http.routers.${PROJECT_NAME}_https.tls.certresolver=myresolver"
+            - "traefik.http.routers.${PROJECT_NAME}_https.middlewares=${PROJECT_NAME}_www_redirect"
+            - "traefik.http.middlewares.${PROJECT_NAME}_https_redirect.redirectscheme.scheme=https"
+            - "traefik.http.middlewares.${PROJECT_NAME}_https_redirect.redirectscheme.permanent=true"
+            - "traefik.http.middlewares.${PROJECT_NAME}_www_redirect.redirectregex.regex=^(https?)://${PROJECT_BASE_URL}/(.*)$$"
+            - "traefik.http.middlewares.${PROJECT_NAME}_www_redirect.redirectregex.replacement=$${1}://www.${PROJECT_BASE_URL}/$${2}"
+            - "traefik.http.middlewares.${PROJECT_NAME}_www_redirect.redirectregex.permanent=true"
 
