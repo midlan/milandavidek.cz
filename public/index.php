@@ -34,10 +34,22 @@ header('Content-Type: text/html; charset=utf-8');
     </p>
     <h2>Affiliate</h2>
     <p>
-        Pokud jsem vám poradil s výběrem hardware, budu rád, když ho nakoupíte v některém z partnerských obchodů:
+        Pokud jsem vám poradil s výběrem hardware (nebo jiného produktu), budu rád, když ho nakoupíte v partnerském obchodě:
     </p>
     <ul>
         <li><a href="https://www.alza.cz/?idp=6325">Alza.cz</a></li>
+    </ul>
+    <p>
+        Pokud jsem vám poradil ohledně obchodování s kryptoměnami, budu rád když je nakoupíte v některé partnerské směnárně:
+    </p>
+    <ul>
+        <li><a href="https://coinmate.io?referral=Y0ZBMVJUSndibkZKVVdZM2QxaDVlVkJhWTBKRlp3PT0">COINMATE</a></li>
+    </ul>
+    <p>
+        Pokud jsem vám doporučil Revolut (pro výhodné směnné kurzy, výběry v zahraničí, virtualní platební karty a jiné výhody), budu rád když se zaregistrujete přes následující odkaz:
+    </p>
+    <ul>
+        <li><a href="https://revolut.com/referral/milanm7wu!MASO">Revolut</a></li>
     </ul>
 <!--
 Doručovací adresa:
