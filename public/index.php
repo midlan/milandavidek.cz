@@ -34,7 +34,7 @@ header('Content-Type: text/html; charset=utf-8');
     </p>
     <h2>Affiliate</h2>
     <p>
-        Pokud jsem vám poradil s výběrem hardware (nebo jiného produktu), budu rád, když ho nakoupíte v partnerském obchodě:
+        Pokud jsem vám poradil s výběrem hardware (nebo jiného produktu), budu rád, když ho nakoupíte v některém partnerském obchodě:
     </p>
     <ul>
         <li><a href="https://www.alza.cz/?idp=6325">Alza.cz</a></li>
