@@ -12,7 +12,7 @@ header('Content-Type: text/html; charset=utf-8');
   <body>
     <h1>Vítejte na mých osobních stránkách</h1>
     <p>
-      Ahoj, jmenuji se Milan Davídek a tohle jsou mé osobní stránky. Zatím jen provizorní, napsané za 5 minut, ale v budoucnu tu najdete moje projekty, informace o mně atd.
+      Ahoj, jmenuji se Milan Davídek a tohle jsou mé osobní stránky.
     </p>
     <h2>Moje projekty</h2>
     <p>
@@ -20,9 +20,9 @@ header('Content-Type: text/html; charset=utf-8');
     </p>
     <ul>
       <li><a href="http://milandavidek.cz/">Osobní stránky, které právě čtete</a></li>
-      <li><a href="http://www.oneksys.cz/">ONEKSYS - Online ekonomický systém</a></li>
-      <li><a href="http://jaknawebovky.php5.cz/javascript-sibenice.php">Hra Šibenice</a></li>
-      <li><a href="http://jaknawebovky.php5.cz/">JakNaWebovky - HTML a CSS manuál</a></li>
+      <li><a href="http://www.oneksys.cz/">ONEKSYS - Online ekonomický systém (školní projekt)</a></li>
+      <li><a href="http://jaknawebovky.php5.cz/javascript-sibenice.php">Hra Šibenice (školní projekt)</a></li>
+      <li><a href="http://jaknawebovky.php5.cz/">JakNaWebovky - HTML a CSS manuál (školní projekt)</a></li>
     </ul>
     <h2>Fakturační údaje</h2>
     <p>
@@ -32,6 +32,11 @@ header('Content-Type: text/html; charset=utf-8');
         Svojkovice 18<br />
         338 22 Svojkovice
     </p>
+    <h2>Sociální sitě</h2>
+    <ul>
+        <li><a href="http://github.com/midlan">GitHub</a></li>
+        <li><a href="http://www.linkedin.com/in/milan-dav%C3%ADdek-56b7b0b3/">Linkedin</a></li>
+    </ul>
     <h2>Affiliate</h2>
     <p>
         Pokud jsem vám poradil s výběrem hardware (nebo jiného produktu), budu rád, když ho nakoupíte v některém partnerském obchodě:
