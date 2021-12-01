@@ -35,7 +35,7 @@ header('Content-Type: text/html; charset=utf-8');
     <h2>Sociální sítě</h2>
     <ul>
         <li><a href="http://github.com/midlan">GitHub</a></li>
-        <li><a href="http://www.linkedin.com/in/milan-dav%C3%ADdek-56b7b0b3/">Linkedin</a></li>
+        <li><a href="http://www.linkedin.com/in/milan-davidek/">Linkedin</a></li>
     </ul>
     <h2>Affiliate</h2>
     <p>
