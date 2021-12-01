@@ -32,7 +32,7 @@ header('Content-Type: text/html; charset=utf-8');
         Svojkovice 18<br />
         338 22 Svojkovice
     </p>
-    <h2>Sociální sitě</h2>
+    <h2>Sociální sítě</h2>
     <ul>
         <li><a href="http://github.com/midlan">GitHub</a></li>
         <li><a href="http://www.linkedin.com/in/milan-dav%C3%ADdek-56b7b0b3/">Linkedin</a></li>
