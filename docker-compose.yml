@@ -10,7 +10,7 @@ services:
             PHP_FPM_USER: wodby
             PHP_FPM_GROUP: wodby
         volumes:
-            - ./:/var/www/html:cached
+            - ./public:/var/www/html:cached
 
     nginx:
         image: wodby/nginx:$NGINX_TAG
@@ -21,9 +21,9 @@ services:
         environment:
             NGINX_BACKEND_HOST: php
             NGINX_VHOST_PRESET: php
-            NGINX_SERVER_ROOT: /var/www/html/public
+            NGINX_SERVER_ROOT: /var/www/html
         volumes:
-            - ./:/var/www/html:cached
+            - ./public:/var/www/html:cached
         labels:
             - "traefik.enable=true"
             - "traefik.http.routers.${PROJECT_NAME}_http.rule=Host(`${PROJECT_BASE_URL}`,`www.${PROJECT_BASE_URL}`)"
