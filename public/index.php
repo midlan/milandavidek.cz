@@ -32,6 +32,12 @@ header('Content-Type: text/html; charset=utf-8');
         Svojkovice 18<br />
         338 22 Svojkovice
     </p>
+    <h2>Bankovní spojení</h2>
+    <p>
+        Číslo účtu: 4001980432/2010<br />
+        IBAN: CZ6320100000004001980432<br />
+        BIC: FIOBCZPPXXX<br />
+    </p>
     <h2>Sociální sítě</h2>
     <ul>
         <li><a href="http://github.com/midlan">GitHub</a></li>
@@ -56,13 +62,5 @@ header('Content-Type: text/html; charset=utf-8');
     <ul>
         <li><a href="https://revolut.com/referral/milanm7wu!MASO">Revolut</a></li>
     </ul>
-<!--
-Doručovací adresa:
-
-ATELI Development s.r.o.
-Milan Davídek
-Habrmannovo nám. 794/5
-312 00 Plzeň
--->
   </body>
 </html>
