@@ -11,6 +11,8 @@ services:
             PHP_FPM_GROUP: wodby
         volumes:
             - ./public:/var/www/html:cached
+        networks:
+            - milandavidek_cz
 
     nginx:
         image: wodby/nginx:$NGINX_TAG
@@ -23,6 +25,8 @@ services:
             NGINX_VHOST_PRESET: php
         volumes:
             - ./public:/var/www/html:cached
+        networks:
+            - milandavidek_cz
         labels:
             - "traefik.enable=true"
             - "traefik.http.routers.${PROJECT_NAME}_http.rule=Host(`${PROJECT_BASE_URL}`,`www.${PROJECT_BASE_URL}`)"
@@ -39,3 +43,7 @@ services:
             - "traefik.http.middlewares.${PROJECT_NAME}_www_redirect.redirectregex.replacement=$${1}://www.${PROJECT_BASE_URL}/$${2}"
             - "traefik.http.middlewares.${PROJECT_NAME}_www_redirect.redirectregex.permanent=true"
 
+networks:
+    milandavidek_cz:
+        name: milandavidek_cz
+        external: true
