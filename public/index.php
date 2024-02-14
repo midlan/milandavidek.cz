@@ -29,8 +29,8 @@ header('Content-Type: text/html; charset=utf-8');
         Milan Davídek<br />
         IČ: 01980432<br />
         DIČ: CZ9404131077<br />
-        Svojkovice 18<br />
-        338 22 Svojkovice
+        Bzenecká 1036/12<br />
+        323&nbsp;00 Plzeň
     </p>
     <h2>Bankovní spojení</h2>
     <p>
