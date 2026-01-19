@@ -31,20 +31,20 @@ services:
           - "traefik.enable=true"
         
           ## HTTP Router (Redirects to HTTPS)
-          - "traefik.http.routers.${PROJECT_NAME}_http.rule=Host(`${PROJECT_BASE_URL}`, `www.${PROJECT_BASE_URL}`)"
+          # FIX: Use || instead of comma for multiple hosts
+          - "traefik.http.routers.${PROJECT_NAME}_http.rule=Host(`${PROJECT_BASE_URL}`) || Host(`www.${PROJECT_BASE_URL}`)"
           - "traefik.http.routers.${PROJECT_NAME}_http.entryPoints=web"
           - "traefik.http.routers.${PROJECT_NAME}_http.middlewares=${PROJECT_NAME}_https_redirect"
         
           ## HTTPS Router (Main App)
-          - "traefik.http.routers.${PROJECT_NAME}_https.rule=Host(`${PROJECT_BASE_URL}`, `www.${PROJECT_BASE_URL}`)"
+          # FIX: Use || instead of comma for multiple hosts
+          - "traefik.http.routers.${PROJECT_NAME}_https.rule=Host(`${PROJECT_BASE_URL}`) || Host(`www.${PROJECT_BASE_URL}`)"
           - "traefik.http.routers.${PROJECT_NAME}_https.entryPoints=websecure"
           - "traefik.http.routers.${PROJECT_NAME}_https.tls=true"
           - "traefik.http.routers.${PROJECT_NAME}_https.tls.certResolver=myresolver"
           - "traefik.http.routers.${PROJECT_NAME}_https.middlewares=${PROJECT_NAME}_www_redirect"
         
-          ## Service Definition (CRITICAL for Traefik v3)
-          # v3 often fails to auto-detect the internal port. Explicitly setting it prevents 502/404 errors.
-          # Replace '80' with your container's actual internal port (e.g., 3000, 8080).
+          ## Service Port (Still critical for v3)
           - "traefik.http.services.${PROJECT_NAME}.loadbalancer.server.port=80"
         
           ## Middleware: HTTP -> HTTPS
@@ -52,7 +52,6 @@ services:
           - "traefik.http.middlewares.${PROJECT_NAME}_https_redirect.redirectScheme.permanent=true"
         
           ## Middleware: Naked Domain -> WWW
-          # Matches "https://example.com/foo" and redirects to "https://www.example.com/foo"
           - "traefik.http.middlewares.${PROJECT_NAME}_www_redirect.redirectRegex.regex=^(https?)://${PROJECT_BASE_URL}/(.*)$$"
           - "traefik.http.middlewares.${PROJECT_NAME}_www_redirect.redirectRegex.replacement=$${1}://www.${PROJECT_BASE_URL}/$${2}"
           - "traefik.http.middlewares.${PROJECT_NAME}_www_redirect.redirectRegex.permanent=true"
