@@ -116,7 +116,7 @@ params:
 
   hero:
     enable: true
-    image: /images/hero.svg
+    image: /images/hero.png
     bottomImage:
       enable: true
     button:
@@ -130,7 +130,7 @@ params:
 
   about:
     enable: true
-    image: "/images/me.png"
+    image: "/images/me.jpg"
     skills:
       enable: false
 
