@@ -1,0 +1,171 @@
+baseURL: ""
+title: "Milan Davídek"
+theme: hugo-profile
+
+defaultContentLanguage: "cs"
+defaultContentLanguageInSubdir: false
+
+languages:
+  cs:
+    languageName: "Česky"
+    weight: 1
+    contentDir: "content"
+    menu:
+      main:
+        - identifier: gallery
+          name: Galerie
+          title: Galerie
+          url: /gallery
+          weight: 2
+    params:
+      hero:
+        intro: "Ahoj, jmenuji se"
+        title: "Milan Davídek."
+        subtitle: "Stavím věci pro web"
+        content: ""
+      about:
+        title: "O mně"
+        content: ""
+      experience:
+        title: "Zkušenosti"
+      projects:
+        title: "Projekty"
+        items:
+          - title: ONEKSYS
+            content: "Firemní software pro malé a střední podniky."
+            featured:
+              name: Navštívit
+              link: https://www.oneksys.cz/
+      contact:
+        content: "Moje schránka je vždy otevřená. Neváhejte se ozvat!"
+        btnName: Napište mi
+        btnLink: mailto:CONTACT_EMAIL
+
+  en:
+    languageName: "English"
+    weight: 2
+    contentDir: "content/en"
+    menu:
+      main:
+        - identifier: gallery
+          name: Gallery
+          title: Gallery
+          url: /en/gallery
+          weight: 2
+    params:
+      hero:
+        intro: "Hi, my name is"
+        title: "Milan Davídek."
+        subtitle: "I build things for the web"
+        content: ""
+      about:
+        title: "About Me"
+        content: ""
+      experience:
+        title: "Experience"
+      projects:
+        title: "Projects"
+        items:
+          - title: ONEKSYS
+            content: "Business software for small and medium-sized companies."
+            featured:
+              name: Visit
+              link: https://www.oneksys.cz/
+      contact:
+        content: "My inbox is always open. Feel free to reach out!"
+        btnName: Mail me
+        btnLink: mailto:CONTACT_EMAIL
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+
+enableRobotsTXT: true
+
+pagination:
+  pagerSize: 3
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  title: "Milan Davídek"
+  description: "Osobní stránky Milana Davídka"
+  favicon: "/fav.png"
+  useBootstrapCDN: false
+  animate: true
+
+  navbar:
+    align: ms-auto
+    brandName: "Milan Davídek"
+    disableSearch: true
+    stickyNavBar:
+      enable: true
+      showOnScrollUp: true
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: true
+      disableProjects: false
+      disableAchievements: true
+      disableContact: false
+
+  hero:
+    enable: true
+    image: /images/hero.svg
+    bottomImage:
+      enable: true
+    button:
+      enable: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/midlan
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/milan-davidek/
+
+  about:
+    enable: true
+    image: "/images/me.png"
+    skills:
+      enable: false
+
+  experience:
+    enable: true
+    items: []
+
+  education:
+    enable: false
+
+  achievements:
+    enable: false
+
+  projects:
+    enable: true
+
+  contact:
+    enable: true
+
+  footer:
+    recentPosts:
+      enable: false
+    socialNetworks:
+      github: https://github.com/midlan
+      linkedin: https://www.linkedin.com/in/milan-davidek/
+
+  singlePages:
+    socialShare: false
+
+  terms:
+    read: "Číst"
+    toc: "Obsah"
+    copyright: "Všechna práva vyhrazena"
+
+  datesFormat:
+    article: "2. 1. 2006"
+    articleList: "2. 1. 2006"
+    articleRecent: "2. 1. 2006"
