@@ -95,7 +95,7 @@ markup:
 params:
   title: "Milan Davídek"
   description: "Osobní stránky Milana Davídka"
-  favicon: "/fav.png"
+  favicon: "/fav.svg"
   useBootstrapCDN: false
   animate: true
 
