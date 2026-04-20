@@ -35,6 +35,16 @@ jobs:
         with:
           submodules: recursive
 
+      - name: Inject contact email
+        env:
+          CONTACT_EMAIL: ${{ secrets.CONTACT_EMAIL }}
+        run: |
+          if [ -z "$CONTACT_EMAIL" ]; then
+            echo "::error::CONTACT_EMAIL secret is not set"
+            exit 1
+          fi
+          sed -i "s/CONTACT_EMAIL/$CONTACT_EMAIL/g" hugo.yaml
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5

@@ -38,7 +38,7 @@ languages:
               link: https://www.oneksys.cz/
       contact:
         content: "Moje schránka je vždy otevřená. Neváhejte se ozvat!"
-        btnName: Napište mi
+        btnName: CONTACT_EMAIL
         btnLink: mailto:CONTACT_EMAIL
 
   en:
@@ -73,7 +73,7 @@ languages:
               link: https://www.oneksys.cz/
       contact:
         content: "My inbox is always open. Feel free to reach out!"
-        btnName: Mail me
+        btnName: CONTACT_EMAIL
         btnLink: mailto:CONTACT_EMAIL
 
 outputs:
