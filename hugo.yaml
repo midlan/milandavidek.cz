@@ -40,6 +40,18 @@ languages:
         content: "Moje schránka je vždy otevřená. Neváhejte se ozvat!"
         btnName: CONTACT_EMAIL
         btnLink: mailto:CONTACT_EMAIL
+        bank:
+          title: "Bankovní spojení"
+          account: "4001980432/2010"
+          iban: "CZ6320100000004001980432"
+          bic: "FIOBCZPPXXX"
+        billing:
+          title: "Fakturační údaje"
+          name: "Milan Davídek"
+          ico: "01980432"
+          dic: "CZ9404131077"
+          street: "Bzenecká 1036/12"
+          city: "323 00 Plzeň"
 
   en:
     languageName: "English"
@@ -75,6 +87,18 @@ languages:
         content: "My inbox is always open. Feel free to reach out!"
         btnName: CONTACT_EMAIL
         btnLink: mailto:CONTACT_EMAIL
+        bank:
+          title: "Bank details"
+          account: "4001980432/2010"
+          iban: "CZ6320100000004001980432"
+          bic: "FIOBCZPPXXX"
+        billing:
+          title: "Billing details"
+          name: "Milan Davídek"
+          ico: "01980432"
+          dic: "CZ9404131077"
+          street: "Bzenecká 1036/12"
+          city: "323 00 Plzeň"
 
 outputs:
   home:
