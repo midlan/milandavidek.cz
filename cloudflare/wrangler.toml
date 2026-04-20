@@ -1,0 +1,7 @@
+name = "milandavidek-lang-redirect"
+main = "lang-redirect.js"
+compatibility_date = "2025-01-01"
+
+routes = [
+  { pattern = "milandavidek.cz/*", zone_name = "milandavidek.cz" }
+]
