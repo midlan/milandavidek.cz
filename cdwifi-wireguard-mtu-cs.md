@@ -68,23 +68,10 @@ Na tento profil přepněte při připojení z vlaku nebo jiných sítí s nestan
 
 **Proč 1280?** Je to minimální MTU pro IPv6 — univerzálně bezpečné minimum. S 60 byty režie WireGuardu jsou vnější pakety 1340 bytů, výrazně pod limitem i pro vlaky Railjet.
 
-## Bonus: GitHub SSH přes port 443
-
-Pokud váš WireGuard přesměrovává veškerý provoz a GitHub SSH (port 22) také nefunguje, přidejte do `~/.ssh/config`:
-
-```
-Host github.com
-    Hostname ssh.github.com
-    Port 443
-```
-
-GitHub podporuje SSH přes port 443 (`ssh.github.com`), což obejde jak blokování portu 22, tak MTU problémy při SSH handshaku.
-
 ## Shrnutí
 
 | Příznak | Příčina | Řešení |
 |---|---|---|
 | SSH se zasekne, nejde Ctrl+C | CDWiFi zahazuje pakety >1398 bytů | WireGuard profil s `MTU = 1280` |
-| `git clone` přes SSH visí | Stejný MTU problém | Stejné řešení, nebo použít HTTPS |
-| GitHub SSH nefunguje | Port 22 blokován nebo MTU | `ssh.github.com` port 443 |
+| `git clone` přes SSH visí | Stejný MTU problém | Stejné řešení |
 | Malé příkazy fungují, velké přenosy ne | Klasický MTU blackhole | Ping test pro ověření, snížit MTU |

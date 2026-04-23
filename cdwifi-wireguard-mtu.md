@@ -68,23 +68,10 @@ Switch to this profile when connecting from trains or other networks with unusua
 
 **Why 1280?** It's the IPv6 minimum MTU — a universally safe floor. With 60 bytes WireGuard overhead, outer packets are 1340 bytes, well under even the Railjet's ~1120-byte limit if you further lower it.
 
-## Bonus: GitHub SSH on Port 443
-
-If your WireGuard routes all traffic and GitHub SSH (port 22) is also broken, add this to `~/.ssh/config`:
-
-```
-Host github.com
-    Hostname ssh.github.com
-    Port 443
-```
-
-GitHub supports SSH over port 443 (`ssh.github.com`), which bypasses both port-22 blocking and the MTU issues that affect large handshake packets.
-
 ## Summary
 
 | Symptom | Cause | Fix |
 |---|---|---|
 | SSH hangs, can't Ctrl+C | ČD WiFi drops packets >1398 bytes | WireGuard profile with `MTU = 1280` |
-| `git clone` over SSH hangs | Same MTU issue | Same fix, or use HTTPS remotes |
-| GitHub SSH fails | Port 22 blocked or MTU | `ssh.github.com` port 443 |
+| `git clone` over SSH hangs | Same MTU issue | Same fix |
 | Small commands work, large transfers don't | Classic MTU blackhole | Ping test to confirm, lower MTU |
